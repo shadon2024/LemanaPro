@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		847ADBB62D60F1BC00AECBE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847ADBB52D60F1BC00AECBE6 /* AppDelegate.swift */; };
+		847ADBB82D60F1BC00AECBE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847ADBB72D60F1BC00AECBE6 /* SceneDelegate.swift */; };
+		847ADBBA2D60F1BC00AECBE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847ADBB92D60F1BC00AECBE6 /* ViewController.swift */; };
+		847ADBBD2D60F1BC00AECBE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847ADBBB2D60F1BC00AECBE6 /* Main.storyboard */; };
+		847ADBBF2D60F1C000AECBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847ADBBE2D60F1C000AECBE6 /* Assets.xcassets */; };
+		847ADBC22D60F1C000AECBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847ADBC02D60F1C000AECBE6 /* LaunchScreen.storyboard */; };
+		847ADBCA2D60F4A300AECBE6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847ADBC92D60F4A300AECBE6 /* MainViewController.swift */; };
+		A5B9F11E36E2C972EBD9D52D /* Pods_LemanaPRO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FEDCFDE9BEC9A00F398DD7 /* Pods_LemanaPRO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20FEDCFDE9BEC9A00F398DD7 /* Pods_LemanaPRO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LemanaPRO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A6900C60977ED5A680861C /* Pods-LemanaPRO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LemanaPRO.release.xcconfig"; path = "Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO.release.xcconfig"; sourceTree = "<group>"; };
+		847ADBB22D60F1BC00AECBE6 /* LemanaPRO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemanaPRO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847ADBB52D60F1BC00AECBE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		847ADBB72D60F1BC00AECBE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		847ADBB92D60F1BC00AECBE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847ADBBC2D60F1BC00AECBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		847ADBBE2D60F1C000AECBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847ADBC12D60F1C000AECBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		847ADBC32D60F1C000AECBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847ADBC92D60F4A300AECBE6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F3B168F6BC0577EF7BF2A00D /* Pods-LemanaPRO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LemanaPRO.debug.xcconfig"; path = "Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847ADBAF2D60F1BC00AECBE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B9F11E36E2C972EBD9D52D /* Pods_LemanaPRO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		738ED2937FE061D4296B4C49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3B168F6BC0577EF7BF2A00D /* Pods-LemanaPRO.debug.xcconfig */,
+				59A6900C60977ED5A680861C /* Pods-LemanaPRO.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		847ADBA92D60F1BC00AECBE6 = {
+			isa = PBXGroup;
+			children = (
+				847ADBB42D60F1BC00AECBE6 /* LemanaPRO */,
+				847ADBB32D60F1BC00AECBE6 /* Products */,
+				738ED2937FE061D4296B4C49 /* Pods */,
+				9EDE1DB5E0430C7EE17E1ED0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		847ADBB32D60F1BC00AECBE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847ADBB22D60F1BC00AECBE6 /* LemanaPRO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847ADBB42D60F1BC00AECBE6 /* LemanaPRO */ = {
+			isa = PBXGroup;
+			children = (
+				847ADBB52D60F1BC00AECBE6 /* AppDelegate.swift */,
+				847ADBB72D60F1BC00AECBE6 /* SceneDelegate.swift */,
+				847ADBB92D60F1BC00AECBE6 /* ViewController.swift */,
+				847ADBC92D60F4A300AECBE6 /* MainViewController.swift */,
+				847ADBBB2D60F1BC00AECBE6 /* Main.storyboard */,
+				847ADBBE2D60F1C000AECBE6 /* Assets.xcassets */,
+				847ADBC02D60F1C000AECBE6 /* LaunchScreen.storyboard */,
+				847ADBC32D60F1C000AECBE6 /* Info.plist */,
+			);
+			path = LemanaPRO;
+			sourceTree = "<group>";
+		};
+		9EDE1DB5E0430C7EE17E1ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20FEDCFDE9BEC9A00F398DD7 /* Pods_LemanaPRO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847ADBB12D60F1BC00AECBE6 /* LemanaPRO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847ADBC62D60F1C000AECBE6 /* Build configuration list for PBXNativeTarget "LemanaPRO" */;
+			buildPhases = (
+				F6000E9840378E4E318E6F48 /* [CP] Check Pods Manifest.lock */,
+				847ADBAE2D60F1BC00AECBE6 /* Sources */,
+				847ADBAF2D60F1BC00AECBE6 /* Frameworks */,
+				847ADBB02D60F1BC00AECBE6 /* Resources */,
+				C934176D4013E8CCC0EE96B7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LemanaPRO;
+			productName = LemanaPRO;
+			productReference = 847ADBB22D60F1BC00AECBE6 /* LemanaPRO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847ADBAA2D60F1BC00AECBE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					847ADBB12D60F1BC00AECBE6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 847ADBAD2D60F1BC00AECBE6 /* Build configuration list for PBXProject "LemanaPRO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 847ADBA92D60F1BC00AECBE6;
+			productRefGroup = 847ADBB32D60F1BC00AECBE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847ADBB12D60F1BC00AECBE6 /* LemanaPRO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847ADBB02D60F1BC00AECBE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847ADBC22D60F1C000AECBE6 /* LaunchScreen.storyboard in Resources */,
+				847ADBBF2D60F1C000AECBE6 /* Assets.xcassets in Resources */,
+				847ADBBD2D60F1BC00AECBE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C934176D4013E8CCC0EE96B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6000E9840378E4E318E6F48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LemanaPRO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847ADBAE2D60F1BC00AECBE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847ADBBA2D60F1BC00AECBE6 /* ViewController.swift in Sources */,
+				847ADBB62D60F1BC00AECBE6 /* AppDelegate.swift in Sources */,
+				847ADBB82D60F1BC00AECBE6 /* SceneDelegate.swift in Sources */,
+				847ADBCA2D60F4A300AECBE6 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		847ADBBB2D60F1BC00AECBE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847ADBBC2D60F1BC00AECBE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		847ADBC02D60F1C000AECBE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847ADBC12D60F1C000AECBE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847ADBC42D60F1C000AECBE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		847ADBC52D60F1C000AECBE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		847ADBC72D60F1C000AECBE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B168F6BC0577EF7BF2A00D /* Pods-LemanaPRO.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9H9563L8W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LemanaPRO/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shodon.LemanaPRO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		847ADBC82D60F1C000AECBE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A6900C60977ED5A680861C /* Pods-LemanaPRO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9H9563L8W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LemanaPRO/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shodon.LemanaPRO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847ADBAD2D60F1BC00AECBE6 /* Build configuration list for PBXProject "LemanaPRO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847ADBC42D60F1C000AECBE6 /* Debug */,
+				847ADBC52D60F1C000AECBE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847ADBC62D60F1C000AECBE6 /* Build configuration list for PBXNativeTarget "LemanaPRO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847ADBC72D60F1C000AECBE6 /* Debug */,
+				847ADBC82D60F1C000AECBE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 847ADBAA2D60F1BC00AECBE6 /* Project object */;
+}
