@@ -14,6 +14,14 @@
 		847ADBBF2D60F1C000AECBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847ADBBE2D60F1C000AECBE6 /* Assets.xcassets */; };
 		847ADBC22D60F1C000AECBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847ADBC02D60F1C000AECBE6 /* LaunchScreen.storyboard */; };
 		847ADBCA2D60F4A300AECBE6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847ADBC92D60F4A300AECBE6 /* MainViewController.swift */; };
+		84AF17332D638DC100C471FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF17322D638DC100C471FE /* HomeViewController.swift */; };
+		84AF17352D638DE600C471FE /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF17342D638DE600C471FE /* MyListViewController.swift */; };
+		84AF17372D638E0C00C471FE /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF17362D638E0C00C471FE /* StoriesViewController.swift */; };
+		84AF17392D638E2D00C471FE /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF17382D638E2D00C471FE /* UsersViewController.swift */; };
+		84AF173B2D638FBB00C471FE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF173A2D638FBB00C471FE /* MainTabBarController.swift */; };
+		84AF173D2D65488A00C471FE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF173C2D65488A00C471FE /* AccountViewController.swift */; };
+		84AF17402D68B77700C471FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF173F2D68B77700C471FE /* DetailViewController.swift */; };
+		84AF17432D68C5FA00C471FE /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF17422D68C5FA00C471FE /* QRScannerViewController.swift */; };
 		A5B9F11E36E2C972EBD9D52D /* Pods_LemanaPRO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FEDCFDE9BEC9A00F398DD7 /* Pods_LemanaPRO.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +37,14 @@
 		847ADBC12D60F1C000AECBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847ADBC32D60F1C000AECBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847ADBC92D60F4A300AECBE6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		84AF17322D638DC100C471FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84AF17342D638DE600C471FE /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
+		84AF17362D638E0C00C471FE /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		84AF17382D638E2D00C471FE /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		84AF173A2D638FBB00C471FE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		84AF173C2D65488A00C471FE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		84AF173F2D68B77700C471FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		84AF17422D68C5FA00C471FE /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		F3B168F6BC0577EF7BF2A00D /* Pods-LemanaPRO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LemanaPRO.debug.xcconfig"; path = "Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +90,9 @@
 		847ADBB42D60F1BC00AECBE6 /* LemanaPRO */ = {
 			isa = PBXGroup;
 			children = (
+				84AF17412D68C5BB00C471FE /* QRScanner */,
+				84AF173E2D68B75300C471FE /* City */,
+				84AF17312D638D9E00C471FE /* Tabbar */,
 				847ADBB52D60F1BC00AECBE6 /* AppDelegate.swift */,
 				847ADBB72D60F1BC00AECBE6 /* SceneDelegate.swift */,
 				847ADBB92D60F1BC00AECBE6 /* ViewController.swift */,
@@ -84,6 +103,83 @@
 				847ADBC32D60F1C000AECBE6 /* Info.plist */,
 			);
 			path = LemanaPRO;
+			sourceTree = "<group>";
+		};
+		84AF17312D638D9E00C471FE /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				84AF17482D694B0100C471FE /* Home */,
+				84AF17472D694AF400C471FE /* List */,
+				84AF17462D694AE000C471FE /* Stories */,
+				84AF17452D694ACF00C471FE /* Account */,
+				84AF17442D694AAC00C471FE /* Cart */,
+				84AF173A2D638FBB00C471FE /* MainTabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		84AF173E2D68B75300C471FE /* City */ = {
+			isa = PBXGroup;
+			children = (
+				84AF173F2D68B77700C471FE /* DetailViewController.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		84AF17412D68C5BB00C471FE /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				84AF17422D68C5FA00C471FE /* QRScannerViewController.swift */,
+			);
+			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		84AF17442D694AAC00C471FE /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				84AF173C2D65488A00C471FE /* AccountViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		84AF17452D694ACF00C471FE /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				84AF17382D638E2D00C471FE /* UsersViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		84AF17462D694AE000C471FE /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				84AF17362D638E0C00C471FE /* StoriesViewController.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		84AF17472D694AF400C471FE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				84AF17342D638DE600C471FE /* MyListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		84AF17482D694B0100C471FE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84AF17322D638DC100C471FE /* HomeViewController.swift */,
+				84AF17492D694D3500C471FE /* Catalog */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		84AF17492D694D3500C471FE /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 		9EDE1DB5E0430C7EE17E1ED0 /* Frameworks */ = {
@@ -209,9 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AF17402D68B77700C471FE /* DetailViewController.swift in Sources */,
+				84AF17332D638DC100C471FE /* HomeViewController.swift in Sources */,
+				84AF17352D638DE600C471FE /* MyListViewController.swift in Sources */,
+				84AF173B2D638FBB00C471FE /* MainTabBarController.swift in Sources */,
 				847ADBBA2D60F1BC00AECBE6 /* ViewController.swift in Sources */,
 				847ADBB62D60F1BC00AECBE6 /* AppDelegate.swift in Sources */,
 				847ADBB82D60F1BC00AECBE6 /* SceneDelegate.swift in Sources */,
+				84AF173D2D65488A00C471FE /* AccountViewController.swift in Sources */,
+				84AF17432D68C5FA00C471FE /* QRScannerViewController.swift in Sources */,
+				84AF17392D638E2D00C471FE /* UsersViewController.swift in Sources */,
+				84AF17372D638E0C00C471FE /* StoriesViewController.swift in Sources */,
 				847ADBCA2D60F4A300AECBE6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

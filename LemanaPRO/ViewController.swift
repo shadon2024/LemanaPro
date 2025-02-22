@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .orange
         
         // Добавляем subviews
         view.addSubview(splashImageView)
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     private func showMainViewController() {
-        let mainVC = MainViewController() // убедитесь, что MainViewController существует
+        let mainVC = MainTabBarController() // убедитесь, что MainViewController существует
         mainVC.modalTransitionStyle = .crossDissolve
         mainVC.modalPresentationStyle = .fullScreen
         self.present(mainVC, animated: true, completion: nil)
