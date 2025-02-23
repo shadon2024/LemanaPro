@@ -234,7 +234,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = .clear
         collection.showsHorizontalScrollIndicator = false
-        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "recentlyCell")
         collection.dataSource = self
         return collection
     }()
@@ -245,6 +245,48 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 120, height: 120)
     }
+    
+    
+    //  Добавляем массив данных для каталога
+    private let catalogItems = [
+        CatalogItem(title: "Каталог", icon: UIImage(systemName: "line.3.horizontal")),
+        CatalogItem(title: "Сад", icon: UIImage(systemName: "leaf")),
+        CatalogItem(title: "Каталог", icon: UIImage(systemName: "drop"))
+    ]
+    
+    
+    // Структура для элементов каталога
+    public struct CatalogItem {
+        let title: String
+        let icon: UIImage? // Имя системной иконки
+        
+        // Инициализатор автоматически создается, но можно явно указать для наглядности
+        public init(title: String, icon: UIImage?) {
+            self.title = title
+            self.icon = icon
+        }
+    }
+    
+    
+    // Добавляем UICollectionView для каталога
+    private lazy var catalogCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal // Горизонтальная прокрутка
+        layout.minimumLineSpacing = 16 // Расстояние между ячейками
+        layout.itemSize = CGSize(width: 110, height: 80) // Размер ячейки
+        
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = .white
+        collection.showsHorizontalScrollIndicator = false
+        collection.delegate = self // Устанавливаем делегат
+        collection.dataSource = self // Устанавливаем источник данных
+        collection.register(CatalogCell.self, forCellWithReuseIdentifier: "CatalogCell") // Регистрируем кастомную ячейку
+        return collection
+    }()
+    
+    
+    
+    
 
     // MARK: - Lifecycle
     // 21. Основной метод жизненного цикла для настройки UI и делегатов
@@ -281,6 +323,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
          discountButton, cashbackButton, saleButton,
          recentlyViewedLabel, recentlyViewedCollectionView
         ].forEach { view.addSubview($0) }
+        
+        // Добавляем коллекцию каталога
+        view.addSubview(catalogCollectionView)
     }
 
     // MARK: - Setup Constraints with SnapKit
@@ -338,6 +383,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             make.top.equalTo(searchContainerView.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+        
+        // Ограничения для коллекции каталога
+        catalogCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(searchContainerView.snp.bottom).offset(16)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
+            make.height.equalTo(80)
         }
         
         catalogButton.snp.makeConstraints { make in
@@ -472,19 +525,53 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 }
 
+
+
+
+
+
 // MARK: - UICollectionViewDataSource
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     // 31. Количество элементов в коллекции недавно просмотренных
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if collectionView == catalogCollectionView {
+            return catalogItems.count
+        } else if collectionView == recentlyViewedCollectionView {
+            return 10
+        }
+        return 0
     }
 
     // 32. Настройка ячеек коллекции недавно просмотренных
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell",
-                                                      for: indexPath)
-        cell.backgroundColor = .systemGray4
-        return cell
+        if collectionView == catalogCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CatalogCell",
+                                                          for: indexPath)
+            cell.backgroundColor = .systemGray4
+            return cell
+        } else if collectionView == recentlyViewedCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recentlyCell",
+                                                          for: indexPath)
+            cell.backgroundColor = .systemGray4
+            return cell
+        }
+        
+        
+        return UICollectionViewCell()
+
     }
+    
+    
+    // 7. Обработка нажатий на ячейку (опционально)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedItem = catalogItems[indexPath.item]
+        print("Выбрана категория: \(selectedItem.title)")
+        // Здесь можно добавить переход на другой экран или логику
+    }
+    
 }
+
+
+
+

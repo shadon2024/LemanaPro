@@ -22,6 +22,7 @@
 		84AF173D2D65488A00C471FE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF173C2D65488A00C471FE /* AccountViewController.swift */; };
 		84AF17402D68B77700C471FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF173F2D68B77700C471FE /* DetailViewController.swift */; };
 		84AF17432D68C5FA00C471FE /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF17422D68C5FA00C471FE /* QRScannerViewController.swift */; };
+		84AF174B2D6A8CB200C471FE /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF174A2D6A8CB200C471FE /* CatalogCell.swift */; };
 		A5B9F11E36E2C972EBD9D52D /* Pods_LemanaPRO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FEDCFDE9BEC9A00F398DD7 /* Pods_LemanaPRO.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		84AF173C2D65488A00C471FE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		84AF173F2D68B77700C471FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		84AF17422D68C5FA00C471FE /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		84AF174A2D6A8CB200C471FE /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		F3B168F6BC0577EF7BF2A00D /* Pods-LemanaPRO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LemanaPRO.debug.xcconfig"; path = "Target Support Files/Pods-LemanaPRO/Pods-LemanaPRO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +180,7 @@
 		84AF17492D694D3500C471FE /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				84AF174A2D6A8CB200C471FE /* CatalogCell.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AF174B2D6A8CB200C471FE /* CatalogCell.swift in Sources */,
 				84AF17402D68B77700C471FE /* DetailViewController.swift in Sources */,
 				84AF17332D638DC100C471FE /* HomeViewController.swift in Sources */,
 				84AF17352D638DE600C471FE /* MyListViewController.swift in Sources */,
