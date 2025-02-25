@@ -250,8 +250,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     //  Добавляем массив данных для каталога
     private let catalogItems = [
         CatalogItem(title: "Каталог", icon: UIImage(systemName: "line.3.horizontal")),
-        CatalogItem(title: "Сад", icon: UIImage(systemName: "leaf")),
-        CatalogItem(title: "Каталог", icon: UIImage(systemName: "drop"))
+        CatalogItem(title: "Сад", icon: UIImage(named: "garden")),
+        CatalogItem(title: "Сантехника", icon: UIImage(named: "plumbing")),
+        CatalogItem(title: "Инструменты", icon: UIImage(named: "tools")),
+        CatalogItem(title: "Текстиль", icon: UIImage(named: "textiles")),
+        CatalogItem(title: "Декор", icon: UIImage(named: "decor")),
+        CatalogItem(title: "Смотреть всё", icon: UIImage(systemName: "chevron.right.circle"))
     ]
     
     
@@ -268,19 +272,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    
     // Добавляем UICollectionView для каталога
     private lazy var catalogCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal // Горизонтальная прокрутка
-        layout.minimumLineSpacing = 16 // Расстояние между ячейками
-        layout.itemSize = CGSize(width: 110, height: 80) // Размер ячейки
+        layout.minimumLineSpacing = 20 // Расстояние между ячейками
+        layout.minimumInteritemSpacing = 20
+        layout.itemSize = CGSize(width: 140, height: 140) // Размер ячейки
         
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.backgroundColor = .white
+        collection.backgroundColor = .clear
         collection.showsHorizontalScrollIndicator = false
         collection.delegate = self // Устанавливаем делегат
         collection.dataSource = self // Устанавливаем источник данных
         collection.register(CatalogCell.self, forCellWithReuseIdentifier: "CatalogCell") // Регистрируем кастомную ячейку
+        //collection.layer.shadowRadius =
         return collection
     }()
     
@@ -319,9 +326,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchContainerView.addSubview(closeButton)
         view.addSubview(categoriesTableView)
         
-        [catalogButton, gardenButton, plumbingButton,
-         discountButton, cashbackButton, saleButton,
-         recentlyViewedLabel, recentlyViewedCollectionView
+        //  catalogButton, gardenButton, plumbingButton, discountButton, cashbackButton, saleButton
+        [ recentlyViewedLabel, recentlyViewedCollectionView
         ].forEach { view.addSubview($0) }
         
         // Добавляем коллекцию каталога
@@ -385,58 +391,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             make.bottom.equalToSuperview()
         }
         
+        
         // Ограничения для коллекции каталога
         catalogCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(searchContainerView.snp.bottom).offset(16)
+            make.top.equalTo(searchContainerView.snp.bottom).offset(-30)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.height.equalTo(80)
+            make.height.equalTo(140)
         }
         
-        catalogButton.snp.makeConstraints { make in
-            make.top.equalTo(searchContainerView.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-                
-        gardenButton.snp.makeConstraints { make in
-            make.top.equalTo(catalogButton)
-            make.leading.equalTo(catalogButton.snp.trailing).offset(16)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-                
-        plumbingButton.snp.makeConstraints { make in
-            make.top.equalTo(catalogButton)
-            make.leading.equalTo(gardenButton.snp.trailing).offset(16)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-                
-        discountButton.snp.makeConstraints { make in
-            make.top.equalTo(catalogButton.snp.bottom).offset(16)
-            make.leading.equalToSuperview().offset(16)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-                
-        cashbackButton.snp.makeConstraints { make in
-            make.top.equalTo(discountButton)
-            make.leading.equalTo(discountButton.snp.trailing).offset(16)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-                
-        saleButton.snp.makeConstraints { make in
-            make.top.equalTo(discountButton)
-            make.leading.equalTo(cashbackButton.snp.trailing).offset(16)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
                 
         recentlyViewedLabel.snp.makeConstraints { make in
-            make.top.equalTo(discountButton.snp.bottom).offset(24)
+            make.top.equalTo(catalogCollectionView.snp.bottom).offset(124)
             make.leading.equalToSuperview().offset(16)
         }
                 
@@ -474,6 +440,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchBar.isHidden = false
         searchButton.isHidden = false
         scanButton.isHidden = false
+        catalogCollectionView.isHidden = false
+        recentlyViewedCollectionView.isHidden = false
+        recentlyViewedLabel.isHidden = false
 
         searchContainerView.snp.remakeConstraints { make in
             make.top.equalTo(headerView.snp.bottom).offset(16)
@@ -494,6 +463,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             searchBar.isHidden = true
             searchButton.isHidden = true
             scanButton.isHidden = true
+            catalogCollectionView.isHidden = true
+            recentlyViewedCollectionView.isHidden = true
+            recentlyViewedLabel.isHidden = true
 
             searchContainerView.snp.remakeConstraints { make in
                 make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-18)
@@ -547,9 +519,25 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == catalogCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CatalogCell",
-                                                          for: indexPath)
-            cell.backgroundColor = .systemGray4
+                                                          for: indexPath) as! CatalogCell
+            
+            // Проверяем, последняя ли ячейка
+            let isLast = indexPath.row == catalogItems.count - 1
+            
+            // Устанавливаем цвет фона в зависимости от индекса
+            if indexPath.row == 0  {
+                cell.backgroundColor = .systemYellow // Цвет для первой ячейки
+            } else if indexPath.row == 6 {
+                cell.backgroundColor = .systemYellow
+            } else {
+                cell.backgroundColor = .systemGray6
+            }
+            
+            cell.configure(with: catalogItems[indexPath.row], isLast: isLast)
+            cell.layer.cornerRadius = 4
+            
             return cell
+            
         } else if collectionView == recentlyViewedCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recentlyCell",
                                                           for: indexPath)
@@ -566,8 +554,32 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     // 7. Обработка нажатий на ячейку (опционально)
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedItem = catalogItems[indexPath.item]
-        print("Выбрана категория: \(selectedItem.title)")
+        //print("Выбрана категория: \(selectedItem.title)")
+        
         // Здесь можно добавить переход на другой экран или логику
+        
+        // Создаём новый контроллер
+        if indexPath.row == 0 {
+            let detailViewController = CatalogUIViewController()
+            //detailViewController.selectedTitle = selectedItem.title
+            
+            navigationController?.pushViewController(detailViewController, animated: true)
+        } else if indexPath.row == 1 {
+            print("Выбрана категория: \(selectedItem.title)")
+        } else if indexPath.row == 2 {
+            print("Выбрана категория: \(selectedItem.title)")
+        } else if indexPath.row == 3 {
+            print("Выбрана категория: \(selectedItem.title)")
+        } else if indexPath.row == 4 {
+            print("Выбрана категория: \(selectedItem.title)")
+        } else if indexPath.row == 5 {
+            print("Выбрана категория: \(selectedItem.title)")
+        } else if indexPath.row == 6 {
+            let detailViewController = CatalogUIViewController()
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
+        
+        
     }
     
 }
